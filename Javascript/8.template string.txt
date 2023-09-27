@@ -1,0 +1,28 @@
+//template string
+
+let name="Vignesh";
+let age="26";
+let city="Bangalore";
+let role="Software Engineer";
+
+let result="";
+result="<table border='2' cellpadding='10'><tr><th>NAME</th><td>"+name+"</td></tr><tr><th>AGE</th><td>"+age+"</td></tr><tr><th>CITY</th><td>"+city+"</td></tr><tr><th>ROLE</th><td>"+role+"</td></tr></table>";
+
+// es5
+
+result+="<hr><table border='2' cellpadding='10'>"+
+		"<tr><th>NAME</th><td>"+name+"</td></tr>"+
+		"<tr><th>AGE</th><td>"+age+"</td></tr>"+
+		"<tr><th>CITY</th><td>"+city+"</td></tr>"+
+		"<tr><th>ROLE</th><td>"+role+"</td></tr>"+
+		"</table>";
+
+// es6 --> template string
+
+result+=`<hr><table border='2' cellpadding='10'>
+		 <tr><th>NAME</th><td>${name}</td></tr>
+		 <tr><th>AGE</th><td>${age>=18?"eligible":"Not eligible"}</td></tr>
+		 <tr><th>CITY</th><td>${city}</td></tr>
+		 <tr><th>ROLE</th><td>${role}</td></tr>
+		 </table>`
+document.body.innerHTML=result;

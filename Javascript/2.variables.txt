@@ -1,0 +1,149 @@
+1997 - var
+
+2015 ES6 - let, const
+
+
+var :
+------
+
+if(true)
+{
+	var msg="Welcome to virtual world!...";
+}
+console.log(msg);
+
+
+let :
+------
+
+if(true)
+{
+	let msg="Welcome to virtual world!...";
+}
+console.log(msg);
+
+
+
+const :
+-------
+
+
+Outside of the scope will not work
+
+if(true)
+{
+	const msg="Welcome to virtual world!...";
+	console.log(msg);
+}
+console.log(msg);
+
+
+
+
+
+
+2. Variable Redeclaration
+
+
+var a=25;
+console.log(a);
+
+var a=30;
+console.log(a);
+
+Output :
+---------
+
+25
+30
+
+
+let a=25;
+console.log(a);
+
+let a=30;
+console.log(a);
+
+Output :
+---------
+
+Error
+
+
+
+
+const a=25;
+console.log(a);
+
+const a=30;
+console.log(a);
+
+Output :
+--------
+
+Error
+
+
+
+3. Value Assignment
+
+
+var a=25;
+console.log(a);
+a=50;
+console.log(a);
+
+
+Output :
+---------
+25
+50
+
+
+
+
+let a=25;
+console.log(a);
+a=50;
+console.log(a);
+
+Output :
+---------
+
+25
+50
+
+
+
+const a=25;
+console.log(a);
+a=50;
+console.log(a);
+
+Output :
+---------
+
+25
+
+
+Uncaught TypeError: Assignment to constant variable.
+
+
+
+
+const student={'name':'raj','age':24}
+console.table(student);
+console.log(student.name);
+student.name='arun';
+console.table(student);
+
+
+
+	we can't change the var value...but we can change the obj values
+
+
+
+
+
+
+

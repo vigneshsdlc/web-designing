@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script>
+		alert("welcome");
+	</script>
+
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script>
+		console.log("welcome");
+	</script>
+
+</body>
+</html>
+
+
+testing.html
+-------------
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+	<script src="code.js">
+
+	</script>
+
+</body>
+</html>
+
+
+
+code.js
+-------
+
+console.log("Welcome");
+console.log(1234);
+console.log(23.265);
+console.log(true);
+console.log([58,76,89,365]);
+console.log({'no':12,'name':'test','role':'developer'});
+console.table({'no':12,'name':'test','role':'developer'});
+console.error("testing error");
+console.warn("testing warning");
+console.clear();
+console.time("Timer");
+for(i=1;i<=10;i++)
+{
+	console.log(i);
+}
+console.timeEnd("Timer");
+

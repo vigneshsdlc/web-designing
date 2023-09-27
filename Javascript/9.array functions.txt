@@ -1,0 +1,323 @@
+foreach
+map
+slice
+splice
+concat
+sort
+fill
+includes
+join
+reverse
+push
+pop
+shift
+unshift
+indexof
+lastindexof
+every
+some
+find
+findindex
+from
+isarray
+filter
+flat
+reduce
+
+
+foreach
+---------
+
+const num=[1,2,3,4,5,6,7];
+
+// 3 arguments = value, index, array
+
+num.forEach((value)=>{
+	console.log(value);
+});
+
+
+num.forEach((value,index)=>{
+	console.log("Index : "+index+" value : "+value);
+});
+
+
+const users=[{name:"raj",age:24,city:"chennai"},
+			 {name:"shiva",age:26,city:"canada"},
+			 {name:"dhana",age:23,city:"kerala"}];
+
+users.forEach((value)=>{
+	console.log(value.name);
+});
+
+
+
+
+
+
+
+
+map :
+------
+
+const num=[1,2,3,4,5,6,7];
+
+let sqrt=num.map((value)=>{
+	return Math.sqrt(value);
+});
+
+console.table(sqrt);
+
+sqrt=num.map((value)=>{
+	return Math.sqrt(value).toFixed(2);
+});
+
+console.table(sqrt);
+
+const users=[{name:"raj",age:24,city:"chennai",scale:80000},
+			 {name:"shiva",age:26,city:"canada",scale:60000},
+			 {name:"dhana",age:23,city:"kerala",scale:90000}];
+
+let elig_status=users.map((user)=>({
+	name:user.name,
+	age:user.age,
+	city:user.city,
+	salary:user.salary,
+	status:user.age>18?"Eligible":"Not Eligible"
+}));
+console.table(elig_status);
+
+elig_status=users.map((user)=>({
+	...user,// spread operator
+	status:user.age>18?"Eligible":"Not Eligible"
+}));
+console.table(elig_status);
+
+
+
+
+
+3. slice()
+-----------
+
+let a=[11,22,33,44,55,66,77,88];
+
+
+console.log(a);
+console.log(a.slice());
+console.log(a.slice(4));
+console.log(a.slice(3,7));
+
+
+4. splice()
+------------
+
+let a=[11,22,33,44,55,66,77,88];
+
+// remove elements
+
+// splice(start, length, new elements)
+
+console.log(a);
+console.log(a.splice(3));
+
+let c=[11,22,33,44,55,66,77];
+console.log(c);
+console.log(c.splice(2,3));
+
+
+let d=[11,22,33,44,55,66];
+console.log(d);
+let result=d.splice(3,2,[111,222]);
+console.log(result);
+console.log(d);
+
+
+let e=[11,22,33,44,55,66];
+console.log(e);
+let result2=e.splice(3,0,[111,222]);
+console.log(result2);
+console.log(e);
+
+
+
+5. concat()
+--------------
+
+const a=[11,22,33];
+const c=[44,55,66];
+const d=[77,88,99];
+
+let e=a.concat(c);
+console.log(e);
+
+e=a.concat(c,d);
+console.log(e);
+
+e=a.concat(c,d,111,222,333);
+console.log(e);
+
+e=a.concat(c,d,444,555,666,['a','c','d']);
+console.log(e);
+
+console.table(e);
+
+
+6. sort()
+----------
+
+const names=['vasanth',"arun","sharmila","cathy"];
+
+console.log("Before sort : ",names);
+
+names.sort();
+console.log("After sort : ",names);
+
+
+
+const num=[11,55,33,22,88,77];
+console.log("Before sort : ",num);
+
+num.sort();
+console.log("After sort : ",num);
+
+num.sort((a,c)=>{
+	return a-c;
+});
+console.log("Asc Compare sort : ",num);
+
+num.sort((a,c)=>{
+	return c-a;
+});
+console.log("Desc Compare sort : ",num);
+
+
+
+const details=[{name:"arun",age:28,role:"developer"},
+			   {name:"vasanth",age:24,role:"analyst"},
+			   {name:"katrine",age:26,role:"doctor"}];
+console.table(details);
+
+details.sort((a,c)=>{
+	return a.age-c.age;
+});
+console.table(details);
+
+details.sort((a,c)=>{
+	if(a.name>c.name) return 1;
+	if(a.name<c.name) return -1;
+	return 0;
+});
+console.table(details);
+
+
+
+7. fill()
+----------
+
+// fill(value,start,end)
+
+let n=[1,2,3,4,5,6,7]
+
+console.log("Before fill : ",n);
+
+//n.fill(20);
+//n.fill(20,3);
+n.fill(20,3,5);
+console.log("After fill : ",n);
+
+
+8. includes
+------------
+
+// includes(value,start_index)
+
+let n=["a","c","d","e"]
+
+let result=n.includes("a");
+console.log(result);
+
+result=n.includes("t");
+console.log(result);
+
+result=n.includes("a",2)
+console.log(result);
+
+
+
+9. join()
+----------
+
+
+let n=["a","c","d","e"]
+
+console.log(n);
+
+console.log(n.join());
+
+console.log(n.join("|"));
+
+
+
+10. reverse()
+--------------
+
+let n=["a","c","d","e"]
+
+console.log("Before reverse : ",n);
+n.reverse();
+console.log("After reverse : ",n);
+
+// Array element with Length Property 
+const x={1:11,2:22,3:33,length:4};
+console.log(x);
+Array.prototype.reverse.call(x);
+console.log(x);
+
+
+11. push()
+-----------
+let n=[11,22,33,44,55]
+console.log(n);
+console.log(n.push(66));
+console.log(n)
+
+n.push(77,88,99);
+console.log(n)
+
+let fruits=["apple"]
+console.log(fruits);
+fruits.push("mango","pine");
+console.log(fruits);
+
+let user1=['raj','sangamesh','vetri']
+let user2=['dheeran','cheran']
+
+//spread operator (...)
+user1.push(...user2);
+console.log(user1);
+
+
+12. pop()
+----------
+
+let n=[11,22,33,44,55]
+console.log(n);
+console.log(n.pop());
+console.log(n)
+
+
+
+13. shift()
+------------
+// shift()
+
+let students=["a","c","d","e"]
+
+console.log("Before shift : ",students);
+
+const element=students.shift();
+console.log("After shift : ",students);
+console.log("Removed element : ",element);
+
+

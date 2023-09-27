@@ -1,0 +1,16 @@
+// Nullish coalescing oeprator (??)
+
+const a=null??"no value";
+console.log(a);
+
+const c=null??45;
+console.log(c);
+
+
+const user={'name':'test'};
+console.log(user);
+console.log(user.name);
+
+user.city??="bangalore";
+console.log(user.city);
+console.log(user);

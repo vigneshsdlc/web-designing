@@ -1,0 +1,106 @@
+let user={
+	name:"test",
+	age:24,
+	city:"bangalore",
+	scale:120000
+};
+
+for(let i in user)
+{
+	console.log(i);
+}
+
+for(let i in user)
+{
+	console.log(i+" : "+user[i]);
+}
+
+
+
+
+				looping over objects by converting to an array
+
+
+let user={
+	name:"test",
+	age:24,
+	city:"bangalore",
+	scale:120000
+};
+
+let arr_keys=Object.keys(user);
+console.table(arr_keys);
+
+let arr_values=Object.values(user);
+console.table(arr_values);
+
+for(let i=0;i<arr_keys.length;i++)
+{
+	console.log(arr_keys[i]+" : "+arr_values[i]);
+}
+
+
+
+
+
+				Taking values one by one from the nested list
+
+let data=[[1,"test","developer"],
+		  [2,"demo","analyst"],
+		  [3,"index","Architect"]
+		 ]
+
+for(let i of data)
+{
+	for(let j of i)
+	{
+		console.log(j);
+	}
+}
+
+
+
+				Taking values ony by one which name starts with letter 'p'
+
+let data=[["rajesh","manickam","selva","prabhu"],
+		  ["siva","selvi","jeya","deepan"],
+		  ["pradeep","prathap","arun","vijay"]
+		 ]
+
+for(let i of data)
+{
+	for(let j of i)
+	{
+		if(j.startsWith('p'))
+		{
+			console.log("Found the name starts with 'R' : ",j);
+		}
+	}
+}
+
+
+
+
+					Label block in javascript
+
+let data=[["rajesh","manickam","selva","prabhu"],
+		  ["siva","selvi","jeya","deepan"],
+		  ["pradeep","prathap","arun","vijay"]
+		 ]
+
+for(let i of data)
+{
+	inner:
+	for(let j of i)
+	{
+		if(j.startsWith('p'))
+		{
+			console.log("Found the name starts with 'R' : ",j);
+			break inner;
+		}
+	}
+}
+
+
+oru list la oru dataku mela edukadhu
+

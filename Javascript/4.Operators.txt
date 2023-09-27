@@ -1,0 +1,174 @@
+					 OPERATORS   ( https://www.tutorialstonight.com/js/js-operators#javascript-arithmetic-operator )
+				        ----------- 
+
+1) Arithmetic 
+--------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arithmetic operator</title>
+</head>
+<body>
+    <h2>Arithmetic operator</h2>
+    <p id="output"></p>
+    <script>
+        let add = 5 + 5;
+        let sub = 12 - 8;
+        let exp = 5 ** 2; // 5^2 = 25
+        let mod = 12 % 5; // remainder 2
+        let div = 12 / 3; // output 4
+        let x = 100;
+        x++; // increased by one output 101
+        let y = 100;
+        y--; // decrease by one output 99
+        document.getElementById("output").innerHTML = add + "<br>" + sub + "<br>" + exp + "<br>" + mod + "<br>" + div + "<br>" + x + "<br>" + y;
+    </script>
+</body>
+</html>
+
+Output :
+---------
+Arithmetic operator
+
+10
+4
+25
+2
+4
+101
+99
+
+
+2) Comparision
+---------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Comparison operator</title>
+</head>
+<body>
+    <h2>Comparison operator</h2>
+    <p id="output"></p>
+    <script>
+        let eql = (5==5);
+        let ident = (10==="10"); //return false (equal but different type)
+        let grt = (5>10); // return false
+        let grt_eql = (15>=10);
+        let less = (10<20); // return false
+        let not_eql = (10!=20); // true
+        document.getElementById("output").innerHTML = eql + "<br>" +ident+ "<br>" +grt+ "<br>" +grt_eql+ "<br>" +less+ "<br>" +not_eql;
+    </script>
+</body>
+</html>
+
+Output :
+---------
+Comparison operator
+
+true
+false
+false
+true
+true
+true
+
+3) Assignment
+--------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment operator</title>
+</head>
+<body>
+    <h2>Assignment operator</h2>
+    <p id="output"></p>
+    <script>
+        let a = 10, b = 5, c = 12, d = 15, e = 5, f = 20, g = 45;
+        b += 10; // 5 + 10 = 15
+        c -= 5; // 12 - 5 = 7
+        d *= 2; // 15 * 2 = 30
+        e **= 2; // 5 ** 2 = 25
+        f %= 7; // 20 % 7 = 6
+        g /= 9; // 45 / 9 = 5
+        document.getElementById("output").innerHTML = a + "<br>" +b+ "<br>" +c+ "<br>" +d+ "<br>" + e + "<br>" + f + "<br>" + g;
+    </script>
+</body>
+</html>
+
+
+Output :
+---------
+Assignment operator
+
+10
+15
+7
+30
+25
+6
+5
+
+
+4) Logical
+------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Logical operator</title>
+</head>
+<body>
+    <h2>Logical operator</h2>
+    <p id="output"></p>
+    <script>
+        let a = (true && true); // output true
+        let b = (true && false); // output false
+        let c = (true || true); // output true
+        let d = (true || false); // output true
+        let e = !true; // output false
+
+        document.getElementById("output").innerHTML = a + "<br>" +b+ "<br>" +c+ "<br>" +d+ "<br>" + e ;
+    </script>
+</body>
+</html>
+
+Output :
+---------
+Logical operator
+
+true
+false
+true
+true
+false
+
+
+
+5. Math functions
+------------------
+
+let c;
+
+c=Math.PI;
+c=Math.E;
+c=Math.round(9.8);
+c=Math.round(9.2);
+c=Math.floor(5.3);
+c=Math.ceil(5.3);
+c=Math.sqrt(90);
+c=Math.abs(-90);
+c=Math.trunc(3.98);
+c=Math.pow(2,4);
+c=Math.min(11,22,33,44);
+c=Math.max(11,22,33,44);
+c=Math.random();
+c=Math.floor(Math.random()*100+1);
+c=Math.sign(90);
+console.log(c);
+
+
+

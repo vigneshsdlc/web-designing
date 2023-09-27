@@ -1,0 +1,113 @@
+number
+boolean
+null
+undefined
+symbols E6
+
+Array
+object literals
+Date
+
+var a=25;
+var a=25.5;
+var names="sakthi";
+var c=true;
+var d=null;
+var e;
+
+var f=Symbol();
+var g=Symbol();
+
+var courses=['c','c++','Python','Django','Datascience']
+var details={'1':'111','2':'222'}
+
+var h=new Date();
+console.log(typeof h);
+
+
+
+----------------------------------------------------------------------------------------------------------------
+
+						TYPE CONVERSION
+let a=100;
+console.log(a,typeof a);
+a=String(a);
+console.log(a,typeof a);
+
+
+a=100.65;
+console.log(a,typeof a);
+a=String(a);
+console.log(a,typeof a);
+
+a=true;
+console.log(a,typeof a);
+a=String(a);
+console.log(a,typeof a);
+
+a=new Date();
+console.log(a,typeof a);
+a=String(a);
+console.log(a,typeof a);
+
+
+a=[11,22,33,44];
+console.log(a,typeof a);
+a=String(a);
+console.log(a,typeof a);
+
+a=[11,22,33,44];
+console.log(a,typeof a);
+a=a.toString();
+console.log(a,typeof a);
+
+// string to number
+
+a="100";
+console.log(a,typeof a);
+a=Number(a);
+console.log(a,typeof a);
+
+a=true;
+console.log(a,typeof a);
+a=Number(a);
+console.log(a,typeof a);
+
+a=[11,22,33,44];
+console.log(a,typeof a);
+a=Number(a);
+console.log(a,typeof a);
+
+a="Hello World";
+console.log(a,typeof a);
+a=Number(a);
+console.log(a,typeof a);
+
+
+a="98";
+console.log(a,typeof a);
+a=parseInt(a);
+console.log(a,typeof a);
+
+a="98.65";
+console.log(a,typeof a);
+a=parseInt(a);
+console.log(a,typeof a);
+
+a="98.68";
+console.log(a,typeof a);
+a=parseFloat(a);
+console.log(a,typeof a);
+
+
+						TYPE COERCION
+					      ------------------
+
+let a=100;
+let c="200";
+console.log(a+c);
+
+c=Number(c);
+console.log(a+c);
+
+
